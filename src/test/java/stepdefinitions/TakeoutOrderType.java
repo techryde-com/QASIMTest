@@ -134,6 +134,13 @@ public class TakeoutOrderType {
 		Thread.sleep(3000);
 
 	}
+	
+	@And("I apply tips")
+	public void applyTips() throws InterruptedException {
+		checkOutPage =new CheckoutPage(driver);
+		checkOutPage.applyCustomTips();
+		Thread.sleep(2000);
+	}
 
 	@And("I enter my name as {string}")
 	public void enterName(String nameText) {

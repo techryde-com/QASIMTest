@@ -35,7 +35,7 @@ public class OrderPage {
 	@FindBy(xpath = "//a[@href='javascript:guestcheckout()']")
 	private WebElement continueAsGuestButton;
 	
-	@FindBy(xpath="//a[contains(@href,'javascript')][1]")
+	@FindBy(xpath="//a[contains(@class, 'time-btn') and (contains(text(), 'PM') or contains(text(), 'AM'))]")
 	private WebElement futureSlot;
 
 	public void clickAsSoonAsPossible() {

@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -64,6 +65,10 @@ public class CheckoutPage {
 
 	@FindBy(id = "i4go_submit")
 	private WebElement payAndProcessOrderButton;
+	
+	@FindBy(id="custTip")
+	private WebElement customTips;
+	
 
 	public void enterMobileNumber(String mobileNumber) {
 		mobileNumberInputField.sendKeys(mobileNumber);
@@ -72,7 +77,14 @@ public class CheckoutPage {
 	public void clickContinue() {
 		continueButton.click();
 	}
-
+	
+	public void applyCustomTips() {
+		customTips.click();
+		driver.findElement(By.id("customTip")).sendKeys("5");
+		driver.findElement(By.tagName("td")).click();
+		
+		
+	}
 	public void enterName(String name) {
 		nameInputField.clear();
 		nameInputField.sendKeys(name);
