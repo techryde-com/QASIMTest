@@ -1,0 +1,9 @@
+/META-INF/
+/features/
+/utils/
+/target/
+*.log
+*.jar
+test-output
+TestReports
+log
