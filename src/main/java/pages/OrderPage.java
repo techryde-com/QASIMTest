@@ -14,10 +14,10 @@ public class OrderPage {
 
 	}
 
-	@FindBy(xpath = "//li[text()='ASAP (Ready in 5 - 10 Min)']")
+	@FindBy(xpath = "//li[@class='active asap time-b']")
 	private WebElement asSoonAsPossibleButton;
 
-	@FindBy(xpath = "//div[@onclick=\"javascript:CheckDelivery('product_modal-301','$11.00')\"]")
+	@FindBy(xpath = "//div[@class='col-md-6']")
 	private WebElement itemMenu;
 
 	@FindBy(xpath = "//input[@id='301-189-0-1-1-Cheese Selection']")
@@ -26,7 +26,7 @@ public class OrderPage {
 	@FindBy(id = "instr_301-1")
 	private WebElement extraInstructionsTextArea;
 
-	@FindBy(id = "btn-301")
+	@FindBy(xpath = "//button[contains(@id, 'btn-')]")
 	private WebElement addToCartButton;
 
 	@FindBy(id = "btn_checkout")
@@ -34,11 +34,16 @@ public class OrderPage {
 
 	@FindBy(xpath = "//a[@href='javascript:guestcheckout()']")
 	private WebElement continueAsGuestButton;
+	
+	@FindBy(xpath="//a[contains(@href,'javascript')][1]")
+	private WebElement futureSlot;
 
 	public void clickAsSoonAsPossible() {
 		asSoonAsPossibleButton.click();
 	}
-
+	public void clickFutureSlot() {
+		futureSlot.click();
+	}
 	public void selectItem() {
 		itemMenu.click();
 	}

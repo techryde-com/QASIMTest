@@ -28,11 +28,17 @@ public class CheckoutPage {
 
 	@FindBy(id = "spInstr")
 	private WebElement instructionsInputField;
+	
+	@FindBy(id="Token-Cash")
+	private WebElement payAtCounter;
+	
+	@FindBy(id="placeOrder")
+	private WebElement placeOrder;
 
 	@FindBy(xpath = "//button[@class='payment_btn add_card_btn shift4card_add']")
 	private WebElement paymentModeButton;
 
-	@FindBy(id = "visaPaymentType") 
+	@FindBy(id = "visaPaymentType")
 	private WebElement visaPaymentType;
 
 	@FindBy(xpath = "//iframe[contains(@name, 'i4goTT_')]")
@@ -55,9 +61,9 @@ public class CheckoutPage {
 
 	@FindBy(id = "i4go_postalCode")
 	private WebElement billingPostalCodeInputField;
-	
-	 @FindBy(id = "i4go_submit") 
-	    private WebElement payAndProcessOrderButton;
+
+	@FindBy(id = "i4go_submit")
+	private WebElement payAndProcessOrderButton;
 
 	public void enterMobileNumber(String mobileNumber) {
 		mobileNumberInputField.sendKeys(mobileNumber);
@@ -120,8 +126,18 @@ public class CheckoutPage {
 		billingPostalCodeInputField.clear();
 		billingPostalCodeInputField.sendKeys(postalCode);
 	}
+
 	public void clickPayAndProcessOrder() {
-        payAndProcessOrderButton.click();
-    	driver.switchTo().defaultContent();
-    }
+		payAndProcessOrderButton.click();
+		driver.switchTo().defaultContent();
+	}
+	
+	public void clickPayAtCounter() {
+		payAtCounter.click();
+	}
+	
+	public void clickPlaceOrder()
+	{
+		placeOrder.click();
+	}
 }

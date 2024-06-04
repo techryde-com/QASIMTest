@@ -7,7 +7,7 @@ import java.util.Properties;
 public class ConfigReader {
 	public static Properties initializeProperties() {
 		Properties prop = new Properties();
-		File propFile = new File(System.getProperty("user.dir") + "\\src\\test\\resource\\config\\config.properties");
+		File propFile = new File(System.getProperty("user.dir") + "/src/test/resource/config/config.properties");
 		try {
 			FileInputStream fis = new FileInputStream(propFile);
 			prop.load(fis);

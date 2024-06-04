@@ -19,13 +19,29 @@ public class LandingPage {
 
 	@FindBy(linkText = "TAKEOUT")
 	private WebElement orderTypeButton;
+	
+	@FindBy(id = "pills-delivery-tab")
+	private WebElement DeliveryTypeButton;
+	
+	@FindBy(xpath = "//*[@id=\"page-content-wrapper\"]/div[1]/div[1]/div[3]/h6/a")
+	private WebElement SigninButton;
+	
+	@FindBy(id="btnupdateAddress")
+	private WebElement DeliveryInstructions;
 
 	public void handleCookies() {
 		CookieHandler.click();
 	}
 
-	public void selectOrderType() {
+	public void selectOrderTypeTakeout() {
 		orderTypeButton.click();
 	}
-
+	
+	public void selectOrderTypeDelivery() {
+		DeliveryTypeButton.click();
+	}
+	
+	public void SignIn() {
+		SigninButton.click();
+	}
 }

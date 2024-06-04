@@ -40,7 +40,7 @@ public class TakeoutOrderType {
 
 	@When("I click on the Takeout order type")
 	public void clickOrderType() {
-		landingPage.selectOrderType();
+		landingPage.selectOrderTypeTakeout();
 		/*
 		 * WebElement orderTypeButton =
 		 * wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText(
@@ -59,6 +59,13 @@ public class TakeoutOrderType {
 		 * xpath("//li[text()='ASAP (Ready in 5 - 10 Min)']"))); button.click();
 		 */
 	}
+	
+	
+	@And("I click on Future Slot")
+	public void ClickFutureSlot() {
+		orderPage = new OrderPage(driver);
+		orderPage.clickFutureSlot();
+	}
 
 	@And("I select an item")
 	public void selectItem() {
@@ -68,18 +75,18 @@ public class TakeoutOrderType {
 
 	}
 
-	@And("I add modifiers to the item")
-	public void addModifiers() throws InterruptedException {
-		Thread.sleep(3000);
-		orderPage = new OrderPage(driver);
-		orderPage.addModifiers();
-
-		/*
-		 * WebElement modalPara = wait.until(ExpectedConditions
-		 * .visibilityOfElementLocated(By.
-		 * xpath("//input[@id='301-189-0-1-1-Cheese Selection']"))); modalPara.click();
-		 */
-	}
+//	@And("I add modifiers to the item")
+//	public void addModifiers() throws InterruptedException {
+//		Thread.sleep(3000);
+//		orderPage = new OrderPage(driver);
+//		orderPage.addModifiers();
+//
+//		/*
+//		 * WebElement modalPara = wait.until(ExpectedConditions
+//		 * .visibilityOfElementLocated(By.
+//		 * xpath("//input[@id='301-189-0-1-1-Cheese Selection']"))); modalPara.click();
+//		 */
+//	}
 
 	@And("I enter {string} in the text field")
 	public void enterText(String extraInstructionText) {
@@ -209,6 +216,20 @@ public class TakeoutOrderType {
 	public void enterPostalCode(String postalCode) {
 		checkOutPage = new CheckoutPage(driver);
 		checkOutPage.enterBillingPostalCode(postalCode);
+	}
+	
+	@And("I click on Pay At Counter or Cash on delivery")
+	public void clickPayAtCounter()
+	{
+		checkOutPage=new CheckoutPage(driver);
+		checkOutPage.clickPayAtCounter();
+	}
+	
+	@And("I click on place Order")
+	public void clickOnPlaceOrder()
+	{
+		checkOutPage=new CheckoutPage(driver);
+		checkOutPage.clickPlaceOrder();
 	}
 
 	@And("I click on Pay and Process Order")
