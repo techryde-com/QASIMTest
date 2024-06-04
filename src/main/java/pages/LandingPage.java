@@ -13,7 +13,7 @@ public class LandingPage {
 		PageFactory.initElements(driver, this);
 
 	}
-
+	//commit
 	@FindBy(xpath = "//button[text()='OK']")
 	private WebElement CookieHandler;
 
