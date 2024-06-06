@@ -1,8 +1,10 @@
-Feature: Ordering Takeout order ASAP and Paying by Credit/Debit Card
+Feature: Ordering Delivery order ASAP and Paying by Credit/Debit Card
 
-  Scenario: Placing a Takeout ASAP Order and Paying by Credit/Debit Card
+  Scenario: Placing a Delivery ASAP Order and Paying by Credit/Debit Card
     Given I am on the restaurant's website
-    When I click on the Takeout order type
+    When I click on the Delivery order type
+    And I Enter the Address
+    And I Select the Delivery Instructions
     And I click on ASAP
     And I select an item
     #And I add modifiers to the item
@@ -27,9 +29,11 @@ Feature: Ordering Takeout order ASAP and Paying by Credit/Debit Card
     
     
    
-    Scenario: Placing a Takeout Future Order and Paying by Credit/Debit Card
+    Scenario: Placing a Delivery Future Order and Paying by Credit/Debit Card
     Given I am on the restaurant's website
-    When I click on the Takeout order type
+    When I click on the Delivery order type
+        And I Enter the Address
+    And I Select the Delivery Instructions
     And I click on Future Slot
     And I select an item
     #And I add modifiers to the item
@@ -53,9 +57,11 @@ Feature: Ordering Takeout order ASAP and Paying by Credit/Debit Card
     Then I should be on the confirmation page
     
     
-    Scenario: Placing a Takeout Order and Paying at counter
+    Scenario: Placing a Delivery Order and Paying at counter
     Given I am on the restaurant's website
-    When I click on the Takeout order type
+    When I click on the Delivery order type
+        And I Enter the Address
+    And I Select the Delivery Instructions
     And I click on ASAP
     And I select an item
     #And I add modifiers to the item
@@ -73,9 +79,11 @@ Feature: Ordering Takeout order ASAP and Paying by Credit/Debit Card
     Then I should be on the confirmation page
     
     
-    Scenario: Placing a Takeout Order with tips.
+    Scenario: Placing a Delivery Order with tips.
     Given I am on the restaurant's website
-    When I click on the Takeout order type
+    When I click on the Delivery order type
+        And I Enter the Address
+    And I Select the Delivery Instructions
     And I click on ASAP
     And I select an item
     #And I add modifiers to the item

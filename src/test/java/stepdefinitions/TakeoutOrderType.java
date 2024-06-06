@@ -37,6 +37,21 @@ public class TakeoutOrderType {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 	}
+	
+	@When("I click on the Delivery order type")
+	public void clickDeliveryOrderType(){
+		landingPage.selectOrderTypeDelivery();
+	}
+	
+	@And("I Enter the Address")
+	public void enterFullAddress() throws InterruptedException {
+		landingPage.enterFullAddress();
+	}
+	
+	@And("I Select the Delivery Instructions")
+	public void enterDeliveryInstructions() {
+		landingPage.enterDeliveryInstructions();
+	}
 
 	@When("I click on the Takeout order type")
 	public void clickOrderType() {
