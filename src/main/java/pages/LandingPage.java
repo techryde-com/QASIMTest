@@ -27,6 +27,9 @@ public class LandingPage {
 
 	@FindBy(id = "pills-delivery-tab")
 	private WebElement DeliveryTypeButton;
+	
+	@FindBy(id = "btn_IRDdelivery")
+	private WebElement IRDeliveryButton;
 
 	@FindBy(xpath = "//*[@id=\"page-content-wrapper\"]/div[1]/div[1]/div[3]/h6/a")
 	private WebElement SigninButton;
@@ -45,6 +48,10 @@ public class LandingPage {
 		act.sendKeys(Keys.ARROW_DOWN);
 		act.sendKeys(Keys.ENTER).perform();
 
+	}
+	
+	public void selectIRDelivery() {
+		IRDeliveryButton.click();
 	}
 	
 	public void enterDeliveryInstructions() {
