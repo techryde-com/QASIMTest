@@ -14,7 +14,8 @@ Feature: Ordering In room Delivery order ASAP and Paying by Credit/Debit Card
     And I click on continue button
     And I enter my name as "Krupal sonkusare"
     And I enter my email as "krupal9098@gmail.com"
-    And I enter instructions as "Please deliver to the front door"
+    And I enter the room number
+    #And I enter instructions as "Please deliver to the front door"
     And I click on Payment mode
     And I select visa as the payment type
     And I enter my card number as "4321000000001119"
@@ -41,7 +42,8 @@ Feature: Ordering In room Delivery order ASAP and Paying by Credit/Debit Card
     And I click on continue button
     And I enter my name as "Krupal sonkusare"
     And I enter my email as "krupal9098@gmail.com"
-    And I enter instructions as "Please deliver to the front door"
+    And I enter the room number
+    #And I enter instructions as "Please deliver to the front door"
     And I click on Payment mode
     And I select visa as the payment type
     And I enter my card number as "4321000000001119"
@@ -67,7 +69,8 @@ Feature: Ordering In room Delivery order ASAP and Paying by Credit/Debit Card
     And I click on continue button
     And I enter my name as "Krupal sonkusare"
     And I enter my email as "krupal9098@gmail.com"
-    And I enter instructions as "Please deliver to the front door"
+    And I enter the room number
+    #And I enter instructions as "Please deliver to the front door"
     And I click on Pay At Counter or Cash on delivery
     And I click on place Order
     Then I should be on the confirmation page
@@ -88,7 +91,8 @@ Feature: Ordering In room Delivery order ASAP and Paying by Credit/Debit Card
     And I apply tips
     And I enter my name as "Krupal sonkusare"
     And I enter my email as "krupal9098@gmail.com"
-    And I enter instructions as "Please deliver to the front door"
+    And I enter the room number
+    #And I enter instructions as "Please deliver to the front door"
     And I click on Payment mode
     And I select visa as the payment type
     And I enter my card number as "4321000000001119"

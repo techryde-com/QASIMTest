@@ -69,6 +69,9 @@ public class CheckoutPage {
 	@FindBy(id="custTip")
 	private WebElement customTips;
 	
+	@FindBy(id="spInstr")
+	private WebElement roomNoInput;
+	
 
 	public void enterMobileNumber(String mobileNumber) {
 		mobileNumberInputField.sendKeys(mobileNumber);
@@ -94,6 +97,10 @@ public class CheckoutPage {
 		emailInputField.clear();
 		emailInputField.sendKeys(emailText);
 
+	}
+	
+	public void enterRoomNo() {
+		roomNoInput.sendKeys("201");
 	}
 
 	public void enterInstructions(String instructions) {

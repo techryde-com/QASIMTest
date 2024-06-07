@@ -43,6 +43,7 @@ public class TakeoutOrderType {
 		landingPage.selectOrderTypeDelivery();
 	}
 	
+	
 	@When("I click on the IRDelivery order type")
 	public void clickOnIRDelivery() {
 		landingPage.selectIRDelivery();
@@ -169,11 +170,18 @@ public class TakeoutOrderType {
 		checkOutPage.enterName(nameText);
 		// driver.findElement(By.xpath("//div[@class='col-md-9']//input[@id='name']")).sendKeys(nameText);
 	}
+	
 
 	@And("I enter my email as {string}")
 	public void enterEmail(String emailText) {
 		checkOutPage = new CheckoutPage(driver);
 		checkOutPage.enterEmail(emailText);
+	}
+	
+	@And("I enter the room number")
+	public void enterRoomNo() {
+		checkOutPage=new CheckoutPage(driver);
+		checkOutPage.enterRoomNo();
 	}
 
 	@And("I enter instructions as {string}")
