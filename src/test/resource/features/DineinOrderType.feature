@@ -1,11 +1,10 @@
-Feature: Ordering In room Delivery order ASAP and Paying by Credit/Debit Card
+Feature: Ordering DineIn order ASAP and Paying by Credit/Debit Card
 
+#Change the URL from config to : https://qasim.orderapp.online/dinein/4/4 to test following sceanrios
 
-#Change the URL from config to : https://qasim.orderapp.online/inroomdinein to test following sceanrios
-
-  Scenario: Placing a In Room Delivery ASAP Order and Paying by Credit/Debit Card
+  Scenario: Placing a DineIn ASAP Order and Paying by Credit/Debit Card
     Given I am on the restaurant's website
-    When I click on the IRDelivery order type
+    When I click on the DineIn order type
     And I click on ASAP
     And I select an item
     #And I add modifiers to the item
@@ -17,8 +16,7 @@ Feature: Ordering In room Delivery order ASAP and Paying by Credit/Debit Card
     And I click on continue button
     And I enter my name as "Krupal sonkusare"
     And I enter my email as "krupal9098@gmail.com"
-    And I enter the room number
-    #And I enter instructions as "Please deliver to the front door"
+    And I enter instructions as "Please deliver to the front door"
     And I click on Payment mode
     And I select visa as the payment type
     And I enter my card number as "4321000000001119"
@@ -31,9 +29,9 @@ Feature: Ordering In room Delivery order ASAP and Paying by Credit/Debit Card
     
     
    
-    Scenario: Placing a In room Delivery Future Order and Paying by Credit/Debit Card
+    Scenario: Placing a DineIn Future Order and Paying by Credit/Debit Card
     Given I am on the restaurant's website
-    When I click on the IRDelivery order type
+    When I click on the DineIn order type
     And I click on Future Slot
     And I select an item
     #And I add modifiers to the item
@@ -45,8 +43,7 @@ Feature: Ordering In room Delivery order ASAP and Paying by Credit/Debit Card
     And I click on continue button
     And I enter my name as "Krupal sonkusare"
     And I enter my email as "krupal9098@gmail.com"
-    And I enter the room number
-    #And I enter instructions as "Please deliver to the front door"
+    And I enter instructions as "Please deliver to the front door"
     And I click on Payment mode
     And I select visa as the payment type
     And I enter my card number as "4321000000001119"
@@ -58,9 +55,9 @@ Feature: Ordering In room Delivery order ASAP and Paying by Credit/Debit Card
     Then I should be on the confirmation page
     
     
-    Scenario: Placing a In room Delivery Order and Paying at counter
+    Scenario: Placing a DineIn Order and Paying at counter
     Given I am on the restaurant's website
-    When I click on the IRDelivery order type
+    When I click on the DineIn order type
     And I click on ASAP
     And I select an item
     #And I add modifiers to the item
@@ -72,16 +69,15 @@ Feature: Ordering In room Delivery order ASAP and Paying by Credit/Debit Card
     And I click on continue button
     And I enter my name as "Krupal sonkusare"
     And I enter my email as "krupal9098@gmail.com"
-    And I enter the room number
-    #And I enter instructions as "Please deliver to the front door"
+    And I enter instructions as "Please deliver to the front door"
     And I click on Pay At Counter or Cash on delivery
     And I click on place Order
     Then I should be on the confirmation page
     
     
-    Scenario: Placing a In room Delivery Order with tips.
+    Scenario: Placing a DineIn Order with tips.
     Given I am on the restaurant's website
-    When I click on the IRDelivery order type
+    When I click on the DineIn order type
     And I click on ASAP
     And I select an item
     #And I add modifiers to the item
@@ -94,8 +90,7 @@ Feature: Ordering In room Delivery order ASAP and Paying by Credit/Debit Card
     And I apply tips
     And I enter my name as "Krupal sonkusare"
     And I enter my email as "krupal9098@gmail.com"
-    And I enter the room number
-    #And I enter instructions as "Please deliver to the front door"
+    And I enter instructions as "Please deliver to the front door"
     And I click on Payment mode
     And I select visa as the payment type
     And I enter my card number as "4321000000001119"

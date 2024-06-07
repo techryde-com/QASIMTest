@@ -36,6 +36,9 @@ public class LandingPage {
 
 	@FindBy(id = "btnupdateAddress")
 	private WebElement DeliveryInstructions;
+	
+	@FindBy(id="btn_eatin")
+	private WebElement DineInTypeButton;
 
 	@FindBy(id = "address")
 	private WebElement EnterAddress;
@@ -48,6 +51,10 @@ public class LandingPage {
 		act.sendKeys(Keys.ARROW_DOWN);
 		act.sendKeys(Keys.ENTER).perform();
 
+	}
+	
+	public void selectOrderTypeDineIn() {
+		DineInTypeButton.click();
 	}
 	
 	public void selectIRDelivery() {

@@ -49,6 +49,10 @@ public class TakeoutOrderType {
 		landingPage.selectIRDelivery();
 	}
 	
+	@When("I click on the DineIn order type")
+	public void clickDineInOrderType() {
+		landingPage.selectOrderTypeDineIn();
+	}
 	@And("I Enter the Address")
 	public void enterFullAddress() throws InterruptedException {
 		landingPage.enterFullAddress();
