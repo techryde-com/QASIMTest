@@ -7,8 +7,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import factory.DriverFactory;
@@ -275,16 +273,16 @@ public class TakeoutOrderType {
 	public void payAndProcessOrder() throws InterruptedException {
 		checkOutPage = new CheckoutPage(driver);
 		checkOutPage.clickPayAndProcessOrder();
-		Thread.sleep(5000);
+		Thread.sleep(20000);
 	}
 
 	@Then("I should be on the confirmation page")
 	public void verifyConfirmationPage() {
 
-		/*WebElement confirmationMessage = driver
+		WebElement confirmationMessage = driver
 				.findElement(By.xpath("//h4[contains(text(),'Yay! Your order is placed.')]"));
 
-		Assert.assertTrue("Confirmation message is not displayed", confirmationMessage.isDisplayed());*/
+		Assert.assertTrue("Confirmation message is not displayed", confirmationMessage.isDisplayed());
 
 		
 	}

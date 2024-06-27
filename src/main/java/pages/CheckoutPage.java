@@ -116,7 +116,7 @@ public class CheckoutPage {
 		driver.switchTo().frame(iframe);
 
 		Select dropdown = new Select(cardTypeDropdown);
-		dropdown.selectByVisibleText("Visa");
+		dropdown.selectByVisibleText("MasterCard");
 
 		// driver.switchTo().defaultContent();
 	}

@@ -23,7 +23,7 @@ public class LandingPage {
 	private WebElement CookieHandler;
 
 	@FindBy(linkText = "TAKEOUT")
-	private WebElement orderTypeButton;
+	private WebElement orderTypeButtonTakeout;
 
 	@FindBy(id = "pills-delivery-tab")
 	private WebElement DeliveryTypeButton;
@@ -31,7 +31,7 @@ public class LandingPage {
 	@FindBy(id = "btn_IRDdelivery")
 	private WebElement IRDeliveryButton;
 
-	@FindBy(xpath = "//*[@id=\"page-content-wrapper\"]/div[1]/div[1]/div[3]/h6/a")
+	@FindBy(xpath = "//*[@id=\"navbar\"]/ul/li/a")
 	private WebElement SigninButton;
 
 	@FindBy(id = "btnupdateAddress")
@@ -70,7 +70,7 @@ public class LandingPage {
 	}
 
 	public void selectOrderTypeTakeout() {
-		orderTypeButton.click();
+		orderTypeButtonTakeout.click();
 	}
 
 	public void selectOrderTypeDelivery() {
@@ -80,5 +80,22 @@ public class LandingPage {
 	public void SignIn() {
 		SigninButton.click();
 	}
+	
+	public boolean isTakeoutButtonClickable() {
+		
+		 return orderTypeButtonTakeout.isDisplayed() && orderTypeButtonTakeout.isEnabled();
+	}
+	
+public boolean isSigninButtonClickable() {
+		
+		return SigninButton.isDisplayed() && SigninButton.isEnabled();
+		
+	}
+
+public boolean isDeliveryButtonClickable() {
+	return DeliveryTypeButton.isDisplayed() && DeliveryTypeButton.isEnabled();
+	
+}
+
 }
 

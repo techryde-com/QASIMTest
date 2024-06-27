@@ -1,10 +1,7 @@
-Feature: Ordering Delivery order ASAP and Paying by Credit/Debit Card
+Feature: Ordering QRDelivery order ASAP and Paying by Credit/Debit Card
 
-  Scenario: Placing a Delivery ASAP Order and Paying by Credit/Debit Card
+  Scenario: Placing a QRDelivery ASAP Order and Paying by Credit/Debit Card
     Given I am on the restaurant's website
-    When I click on the Delivery order type
-    And I Enter the Address
-    And I Select the Delivery Instructions
     And I click on ASAP
     And I select an item
     #And I add modifiers to the item
@@ -12,7 +9,7 @@ Feature: Ordering Delivery order ASAP and Paying by Credit/Debit Card
     And I click on the Add to Cart button
     And I click on the Checkout button
     And I click on continue as a guest
-    And I enter mobile number "8485814837" into mobile number field
+    And I enter mobile number "9322050503" into mobile number field
     And I click on continue button
     And I enter my name as "Krupal sonkusare"
     And I enter my email as "krupal9098@gmail.com"
@@ -29,11 +26,8 @@ Feature: Ordering Delivery order ASAP and Paying by Credit/Debit Card
     
     
    
-    Scenario: Placing a Delivery Future Order and Paying by Credit/Debit Card
+    Scenario: Placing a QRDelivery Future Order and Paying by Credit/Debit Card
     Given I am on the restaurant's website
-    When I click on the Delivery order type
-        And I Enter the Address
-    And I Select the Delivery Instructions
     And I click on Future Slot
     And I select an item
     #And I add modifiers to the item
@@ -41,7 +35,7 @@ Feature: Ordering Delivery order ASAP and Paying by Credit/Debit Card
     And I click on the Add to Cart button
     And I click on the Checkout button
     And I click on continue as a guest
-    And I enter mobile number "8485814837" into mobile number field
+    And I enter mobile number "9322050503" into mobile number field
     And I click on continue button
     And I enter my name as "Krupal sonkusare"
     And I enter my email as "krupal9098@gmail.com"
@@ -57,11 +51,8 @@ Feature: Ordering Delivery order ASAP and Paying by Credit/Debit Card
     Then I should be on the confirmation page
     
     
-    Scenario: Placing a Delivery Order and Paying at counter
+    Scenario: Placing a QRDelivery Order and Paying at counter
     Given I am on the restaurant's website
-    When I click on the Delivery order type
-        And I Enter the Address
-    And I Select the Delivery Instructions
     And I click on ASAP
     And I select an item
     #And I add modifiers to the item
@@ -69,7 +60,7 @@ Feature: Ordering Delivery order ASAP and Paying by Credit/Debit Card
     And I click on the Add to Cart button
     And I click on the Checkout button
     And I click on continue as a guest
-    And I enter mobile number "8485814837" into mobile number field
+    And I enter mobile number "9322050503" into mobile number field
     And I click on continue button
     And I enter my name as "Krupal sonkusare"
     And I enter my email as "krupal9098@gmail.com"
@@ -79,11 +70,8 @@ Feature: Ordering Delivery order ASAP and Paying by Credit/Debit Card
     Then I should be on the confirmation page
     
     
-    Scenario: Placing a Delivery Order with tips.
+    Scenario: Placing a QRDelivery Order with tips.
     Given I am on the restaurant's website
-    When I click on the Delivery order type
-        And I Enter the Address
-    And I Select the Delivery Instructions
     And I click on ASAP
     And I select an item
     #And I add modifiers to the item
@@ -91,7 +79,7 @@ Feature: Ordering Delivery order ASAP and Paying by Credit/Debit Card
     And I click on the Add to Cart button
     And I click on the Checkout button
     And I click on continue as a guest
-    And I enter mobile number "8485814837" into mobile number field
+    And I enter mobile number "9322050503" into mobile number field
     And I click on continue button
     And I apply tips
     And I enter my name as "Krupal sonkusare"

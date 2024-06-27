@@ -19,10 +19,10 @@ Feature: Ordering DineIn order ASAP and Paying by Credit/Debit Card
     And I enter instructions as "Please deliver to the front door"
     And I click on Payment mode
     And I select visa as the payment type
-    And I enter my card number as "4321000000001119"
+    And I enter my card number as "5454545454545454"
     And I enter the expiration date as "04/25"
     And I enter the CVC as "123"
-    And I enter the billing street address as "123 Main Street"
+    And I enter the billing street address as "65 Main Street"
     And I enter the billing postal code as "65000"
     And I click on Pay and Process Order
     Then I should be on the confirmation page
@@ -46,10 +46,10 @@ Feature: Ordering DineIn order ASAP and Paying by Credit/Debit Card
     And I enter instructions as "Please deliver to the front door"
     And I click on Payment mode
     And I select visa as the payment type
-    And I enter my card number as "4321000000001119"
+    And I enter my card number as "5454545454545454"
     And I enter the expiration date as "04/25"
     And I enter the CVC as "123"
-    And I enter the billing street address as "123 Main Street"
+    And I enter the billing street address as "65 Main Street"
     And I enter the billing postal code as "65000"
     And I click on Pay and Process Order
     Then I should be on the confirmation page
@@ -93,10 +93,10 @@ Feature: Ordering DineIn order ASAP and Paying by Credit/Debit Card
     And I enter instructions as "Please deliver to the front door"
     And I click on Payment mode
     And I select visa as the payment type
-    And I enter my card number as "4321000000001119"
+    And I enter my card number as "5454545454545454"
     And I enter the expiration date as "04/25"
     And I enter the CVC as "123"
-    And I enter the billing street address as "123 Main Street"
+    And I enter the billing street address as "65 Main Street"
     And I enter the billing postal code as "65000"
     And I click on Pay and Process Order
     Then I should be on the confirmation page
